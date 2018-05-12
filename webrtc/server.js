@@ -51,6 +51,7 @@ io.on('connection', function(socket){
 		if (!roomInfo[roomID]) {
 			roomInfo[roomID] = [];
 		}
+		if (users)
 		roomInfo[roomID].push(registeredUser);
 		
 	

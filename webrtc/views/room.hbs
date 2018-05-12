@@ -269,7 +269,6 @@
           theirVideoArea.src = URL.createObjectURL(event.stream);
         }
 		
-		openDataChannel();
 		
 		navigator.getUserMedia = navigator.getUserMedia || 
 								 navigator.webkitGetUserMedia ||
@@ -293,25 +292,7 @@
         }, logError);
 	  }
 	  
-		
-		
-		function openDataChannel() { 
 
-		var dataChannelOptions = { 
-		reliable:true 
-		}; 
-	
-		var dataChannel = rtcPeerConn.createDataChannel("rtcDataChannel", dataChannelOptions);
-	
-		dataChannel.onerror = function (error) { 
-		console.log("Error:", error); 
-		};
-	
-		dataChannel.onmessage = function (event) { 
-		console.log("Got message:", event.data); 
-		};  
-		}
-  
 
 	  
 	  function logError(error) {
