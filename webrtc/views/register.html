@@ -48,37 +48,25 @@
     <center><img src="img/webrtclogo.png"></center>
 	<center><b><h1><font color="white">WebRTC</h1></b></center>
   <div id="login_div" class="main-div">
+    <center><b>SIGN UP A NEW ACCOUNT!</b></center>
     <br>
-    <center><input type="email" placeholder="Email..." id="email_field" /></center>
+    <center><input type="email" placeholder="Email..." id="txtEmail" /></center>
     <br>
-    <center><input type="password" placeholder="Password..." id="password_field" /></center>
+    <center><input type="password" placeholder="Password..." id="txtPass" /></center>
     <br>
-    <center><button onclick="login()">LOGIN</button>
-            <button onclick="signup()">REGISTER</button</center>
-    <br>
+    <center><button id="btnSignUp">SUBMIT</button>
+    <button onclick="tologin()">LOGIN</button></center>
+	<br>
     
-  </div>
-
-  <center><div id="user_div" class="loggedin-div">
-    <p id="user_para"></p>
-  <button onclick="start()">START</button><br>
-  <br>
-  <button onclick="logout()">SIGN OUT</button></center>
   </div>
   
   <script>
+
   
-  
-  function start(){
+  function tologin(){
 	
-	window.open("index2.html", target="_self");
+	window.open("login.html", target="_self");
 	
-  }
-  
-  function signup(){
-  
-	window.open("register.html", target="_self");
-  
   }
 
   </script>
@@ -87,7 +75,7 @@
 
 
 
-<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -100,8 +88,7 @@
   };
   firebase.initializeApp(config);
 </script>
-<script src="login.js"></script>
-<script src="login2.js"></script>
+<script src="register.js"></script>
 <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     

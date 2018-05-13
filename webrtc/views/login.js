@@ -62,4 +62,5 @@ function login(){
 
 function logout(){
   firebase.auth().signOut();
+  window.open("login.html",  target="_self");
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
   <head>
 
@@ -28,7 +28,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">WebRTC</a>
+        
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">CDC17N7 WebRTC</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -53,13 +54,15 @@
 
               <img src="img\webrtclogo.png">
               <body background="black.png">
-              <h1 class="brand-heading">WebRTC</h1>
+              <img src="img\webrtc.png" style="width:250px;height:80px">
+              <h1 class="brand-heading"></h1>
+              <div id="google_translate_element"></div>
               <p class="intro-text">A free, Convenient, Open Platform.
                 <br>Start WebRTC !</p>
               <a href="#about" class="btn btn-circle js-scroll-trigger">
                 <i class="fa fa-angle-double-down animated"></i>
               </a>
-            </body>
+              </body>
             </div>
           </div>
         </div>
@@ -73,10 +76,13 @@
           <div class="col-lg-8 mx-auto">
             <h2>About WebRTC</h2>
             <p>WebRTC (Web Real-Time Communication) is a free, open-source project that provides web browsers and mobile applications with real-time communication (RTC) via simple application programming interfaces (APIs). It allows audio and video communication to work inside web pages by allowing direct peer-to-peer communication, eliminating the need to install plugins or download native apps.</p>
-			  <img src="img/Platforms.png">
+        <img src="img/Platforms.png">
+        <center><a href="http://www.ive.edu.hk/ivesite/html/tc/index.html" target="_blank">Made By HKIVECW 2017-2018 CDC17N7</a></center>
               <p></p>
             
-            <button><a href="login.html" class="myButton">Try It Now!</button>
+            <button><a href="login.html" target="_blank" class="myButton">Try It Now!</button>
+            <br><br>
+            
 			<script>
 			
 			</script>
@@ -84,7 +90,7 @@
         </div>
       </div>
     </section>
-
+    
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -97,7 +103,15 @@
     <script src="js/grayscale.min.js"></script>
 	
 	<script src="js/jquery.js"></script>
-	<script src="/socket.io/socket.io.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+  </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   </body>
 

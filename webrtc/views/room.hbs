@@ -166,7 +166,8 @@
 		<a id="download"></a>
 		<span id="status"></span>
 		</section>
-		
+    <br>
+		<center><a href="http://www.ive.edu.hk/ivesite/html/tc/index.html" target="_blank">Made By HKIVECW 2017-2018 CDC17N7</a></center>
 	</div>
 	</font>
 	<script src="/socket.io/socket.io.js"></script>
@@ -183,7 +184,7 @@
 	window.onload=getURL();
 	
 	$(function () {
-      // ----------设置昵称-------------
+      // --------setting username---------------
       var userName = '';
 		
 		
@@ -303,7 +304,7 @@
 	  
 	 
 	
-	// 監聽消息
+	// Listening message
       socket.on('msg', function (userName, msg) {
         var message = '' +
             '<div class="message">' +
@@ -315,7 +316,7 @@
       });
 
 	  
-	// 監聽系统消息
+	// Listening system signal
       socket.on('sys', function (sysMsg, users) {
         var message = '<div class="sysMsg">' + sysMsg + '</div>';
         $('#msglog').append(message);

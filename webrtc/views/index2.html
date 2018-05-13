@@ -1,10 +1,32 @@
 <!doctype html>
 <html>
   <head>
+
+      <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+      <link rel="stylesheet" href="style.css" />
+      
+      <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+    
+        <title>WebRTC</title>
+    
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- Custom fonts for this template -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Cabin:300' rel='stylesheet' type='text/css'>
+    
+        <!-- Custom styles for this template -->
+        <link href="css/grayscale.min.css" rel="stylesheet">
+
     <style> 
 	.buttonsize{
     height:35px;
-    width:80px;
+    width:100px;
 	}
 
 	#rname{
@@ -23,7 +45,7 @@
   <body style="background-color:#202020;">
     <br>
     <br>
-    <center><img src="img/webrtclogo.png"></center>
+    <center><a href="index.ejs"><img src="img/webrtclogo.png"></a></center>
     
   <center><b><h1><font color="white">WebRTC</h1></b></center>
   <p id="showusern"></p>
@@ -33,13 +55,13 @@
     <center>
       <button onclick="joinRoom()" class="buttonsize">JOIN</button>
       <button onclick="randomName()" class="buttonsize">RANDOM</button>
-    </center>
+      <br><br>
+      <button onclick="logout()" class="buttonsize">SIGN OUT</button>
+</center>
   </div>
-  
+  <br>
+  <center><a href="http://www.ive.edu.hk/ivesite/html/tc/index.html" target="_blank">Made By HKIVECW 2017-2018 CDC17N7</a></center>
 <script>
-	
-	
-	
 	
 	function joinRoom(){
 	
@@ -56,9 +78,39 @@
 	var num = Math.random()*10000000;
 
     document.getElementById("rname").value = Math.round(num);
+
 	}
 
+
 </script>
+
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAx1bIPbWGbs1EaMiqWykMsnWCh6TF1BqI",
+    authDomain: "webrtc-login.firebaseapp.com",
+    databaseURL: "https://webrtc-login.firebaseio.com",
+    projectId: "webrtc-login",
+    storageBucket: "webrtc-login.appspot.com",
+    messagingSenderId: "346840149814"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="login.js"></script>
+
+<script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+	
+	<script src="js/jquery.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  
    
   </body>
 </html>
